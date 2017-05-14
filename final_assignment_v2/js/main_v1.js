@@ -1,4 +1,7 @@
 var colors = ["grey", "blue", "green", "white", "black"];
+
+
+
 $(document).ready(function(){
 	
 	// open the website and first modules are present
@@ -31,7 +34,7 @@ $(document).ready(function(){
 					'<div class="column">'+
 						'<div class="module">'+
 							'<img src="'+element.urlToImage+'"></img>'+
-							'<h2 id="title"><a href="url: "https://www.theverge.com/2017/5/13/15635052/king-arthur-legend-of-the-sword-review-guy-ritchie-charlie-hunnam",">'+element.title+'</a></h2>'+
+							'<h2 id="title">'+element.title+'</h2>'+
 							'<h3 id="author">'+element.author+'</h3>'+
 							'<p id="description">'+element.description+'</p>'+
 						'</div>'+
@@ -64,17 +67,42 @@ function generateModules(){
     else if (color == 'white') {
       $('body').attr('id','white');
     }
-    else if (color == 'black') {
+    else if (city == 'black') {
       $('body').attr('id','black');
     }
-    else if (color == 'blue') {
+    else if (city == 'blue') {
       $('body').attr('id','blue');
     }
-    else if (color == 'green') {
+    else if (city == 'green') {
       $('body').attr('id','green');
     }
   });
 
 
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
 
 

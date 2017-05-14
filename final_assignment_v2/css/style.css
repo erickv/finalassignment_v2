@@ -35,6 +35,24 @@ background: #333;
   overflow: hidden;
 }
 
+select{
+   color: #6b6b6c;
+  font-size: 38px;
+  background: #fff;
+  border: 1px solid #111;
+  padding: 0px 30px;
+  display: inline-block;
+  width: 200px;
+  height: 30px;
+  margin-right: 24px;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 12px;
+  height: 20px;
+  line-height: 74px;
+  vertical-align: middle;
+  box-shadow: #111 0 0 20px;
+}
+
 header .logo {
   float: left;
   margin: -17px 0 0 0;
