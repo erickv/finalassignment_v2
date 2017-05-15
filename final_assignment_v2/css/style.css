@@ -6,13 +6,36 @@
 body{
 
   font-family: RobotoSlab-Bold;
-    background: #F3F2F2;
+  background: #F3F2F2;
 }
+
+/* unvisited link */
+
+a:link {
+    color: #333333;
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+    color: #666666;
+}
+
+/* mouse over link */
+a:hover {
+    color: green;
+}
+
+/* selected link */
+a:active {
+    color: #333333;
+}
+
 
 #page-header-logo{
   padding-top: 20px;
   padding-left: 1em;
-  font-family: RobotoSlab-Bold;
+  font-family: 'Lato', sans-serif;
   font-size: 39px;
   color: #F3F2F2;
   margin-left: 20%;
@@ -36,7 +59,7 @@ background: #333;
 }
 
 select{
-   color: #6b6b6c;
+  color: #6b6b6c;
   font-size: 38px;
   background: #fff;
   border: 1px solid #111;
@@ -55,7 +78,9 @@ select{
 
 header .logo {
   float: left;
-  margin: -17px 0 0 0;
+  margin: -14px 0 0 0;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
 }
 
 header nav {
@@ -70,7 +95,8 @@ header nav ul li {
   float: right;
   color: white;
   text-decoration: none;
-  font-family: 'Alegreya Sans SC', sans-serif;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
 }
 header nav ul li a {
   color: white;
@@ -82,20 +108,20 @@ form{
   display: inline-block;
   float: right;
 }
-#gray {
-  background: gray;
+#grey {
+  background: #cbcaca;
 }
 #white {
-  background: white;
+  background: #ffffff;
 }
 #green {
-  background: green;
+  background: #8bf88e;
 }
 #blue {
-  background: blue;
+  background: #38b1f0;
 }
-#purple {
-  background: purple;
+#black {
+  background: black;
 }
 
 p{
@@ -128,12 +154,6 @@ h3{
   float:left;
   margin: 0 17px;
 }
-.gutter{
-  height:800px;
-  display: block;
-  width: 10px;
-  float:left;
-}
 
 .module{
     margin-top: 20px;
@@ -159,13 +179,103 @@ h3{
 
 }
 
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    -webkit-animation-name: fadeIn; /* Fade in the background */
+    -webkit-animation-duration: 0.4s;
+    animation-name: fadeIn;
+    animation-duration: 0.4s
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    bottom: 0;
+    background-color: #fefefe;
+    width: 50%;
+    float: left;
+    margin: 66px 30%;
+
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideIn;
+    animation-duration: 0.4s
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #333333;
+    color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+.modal-logo{
+  margin-bottom: 4px;
+  font-weight: 300;
+  font-family: 'Lato', sans-serif;
+
+
+}
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+    from {bottom: -300px; opacity: 0} 
+    to {bottom: 0; opacity: 1}
+}
+
+@keyframes slideIn {
+    from {bottom: -300px; opacity: 0}
+    to {bottom: 0; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+}
 
 header{
     position: fixed;
     width: 100%;
 }
+ /*-- our cleafix hack -- */  
 
-    /*-- our cleafix hack -- */    
+
 .top{ 
     width: 100%;
     height: 31px;
@@ -177,10 +287,86 @@ header{
     font-family: 'Roboto Slab', serif;
     }
 
-    
-
     img{
       height: 224px;
       width: 100%;
     }
+
+
+/*Mobile version starts here*/
+
+
+@media screen and (max-width:768px){ 
+
+  h1.logo{
+    font-size: 1.8em;
+    margin: -12px 0 0 0;
+  }
+
+  nav ul li:first-child{
+    display: block;
+  }
+
+  ul{
+    padding: 0;
+
+  }
+
+  ul li{
+    display: block;
+  }
+  nav{
+    transition: 1s height;
+    height: 0;
+    text-align: center;
+  }
+
+  nav.show{
+    height: 12em;
+  }
+
+  nav, h1 {
+    float: none;
+  }
+
+  header nav ul li a {
+  margin-right: 4px;
+
+}
+  
+  select{
+    color: #6b6b6c;
+    font-size: 38px;
+    background: #fff;
+    border: 1px solid #111;
+    padding: 0px 30px;
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    margin-right: 24px;
+    font-family: helvetica, arial, sans-serif;
+    font-size: 12px;
+    height: 20px;
+    line-height: 74px;
+    vertical-align: middle;
+    box-shadow: #111 0 0 20px;
+  }
+
+  #container{
+          width: 80%; 
+          max-width: 768px;
+          height: 800px;
+          margin: 0 auto;
+          padding: 51px 0;       
+      }
+
+  .column{
+      
+    width: 100%;
+    float:none;
+    margin: 0 17px;
+  }
+
+
+}
 

@@ -7,6 +7,7 @@
 	<!-- <link rel="stylesheet" href="css/normalize.css"> -->
 	<link rel="stylesheet" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	<title>enews</title>
@@ -22,15 +23,30 @@
 						<option>Change Background</option>
 					</select>
 				</form>
-				<li><a href="#">ABOUT</a></li>
+				<li id="myBtn"><a href="#" style="color:white">ABOUT</a></li>
 			</ul>
 			
 		</nav>
 		</div>
-		
+		<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2 class="modal-logo"><span style="color:white">About more</span><span style="color:green">news</span></h2>
+    </div>
+    <div class="modal-body">
+      <p>morenews is a place to enloy the most recent technology news from the places that you like. Change background select your news...</p>
+      <p>morenews is also my first project as FEWD with full functionality, I'm expecting to keep working on it to make it bigger and with more news categories.
+    </div>
+
+  </div>
+
+</div>
 </header>
 <div id="container">
 </div>
-<script src="js/modal.js"></script>
+<!-- <script src="js/modal.js"></script> -->
 </body>
 </html>
